@@ -1,9 +1,13 @@
 fn main() {
-    println!("Hello, world!");
+    let temp = Temperature{
+        value: 32.0};
+
+        println!("{:?}",temp.to_celsius());
+        
 }
 
 enum Unit{
-    Celsius,
+    Celsius(),
     Fahrenheit,
 }
 
@@ -19,6 +23,6 @@ impl Temperature {
 
 
     fn to_fahrenheit(&self) -> f32{
-        (self.value - 32.0) * 5.0/9.0
+        (self.value - 9.0/5.0) + 32.0
     }
 }
